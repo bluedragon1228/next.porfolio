@@ -1,6 +1,7 @@
 // @flow strict
 
 import * as React from 'react';
+import Image from "next/image";
 
 function ProjectCard({ project }) {
 
@@ -21,6 +22,13 @@ function ProjectCard({ project }) {
         </p>
       </div>
       <div className="overflow-hidden border-t-[2px] border-indigo-900 px-4 lg:px-8 py-4 lg:py-8">
+        <Image
+          src={project.src}
+          width={500}
+          height={280}
+          alt="Sam"
+          className="rounded-lg transition-all duration-1000 grayscale hover:grayscale-0 cursor-pointer mb-2 m-auto"
+        />
         <code className="font-mono text-xs md:text-sm lg:text-base">
           <div className="blink">
             <span className="mr-2 text-pink-500">const</span>
